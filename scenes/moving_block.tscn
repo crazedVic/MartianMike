@@ -1,37 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://cyuv8ncxa8k6u"]
+[gd_scene load_steps=7 format=3 uid="uid://cyuv8ncxa8k6u"]
 
 [ext_resource type="Script" path="res://scripts/trap.gd" id="1_6yj06"]
 [ext_resource type="PackedScene" uid="uid://brsg27uixsbge" path="res://scenes/tile_map.tscn" id="3_god1u"]
-
-[sub_resource type="Animation" id="Animation_anv26"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatableBody2D:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_anv26"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("RigidBody2D:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 0)]
-}
 
 [sub_resource type="Animation" id="Animation_80qwf"]
 resource_name = "move"
@@ -52,7 +22,6 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_rwrri"]
 _data = {
-"RESET": SubResource("Animation_anv26"),
 "move": SubResource("Animation_80qwf")
 }
 

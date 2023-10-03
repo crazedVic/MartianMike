@@ -1,7 +1,14 @@
-res://scenes/saw.tscn
 res://scenes/level.tscn
+res://scenes/tile_map.tscn
+res://scenes/saw.tscn
 res://scenes/spike_ball.tscn
 res://scenes/checkpoint.tscn
 res://scenes/player.tscn
 res://scenes/moving_block.tscn
+res://scenes/background.tscn
+res://scripts/background.gd
+res://scenes/spawn_position.tscn
+res://scripts/spawn_position.gd
 res://scripts/level.gd
+res://scenes/exit_position.tscn
+res://scripts/exit_position.gd

@@ -1,11 +1,12 @@
 extends Node2D
 
-
+var player = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	player = get_tree().get_first_node_in_group("player")
 	get_window().position = Vector2(100,100)
-	$Player.position = $SpawnPoint.position
+	$Player.position = $Start.get_spawn_pos()
 	var traps = get_tree().get_nodes_in_group("traps")
 	for trap in traps:
 		trap.damage.connect(_on_trap_damage)
@@ -24,12 +25,12 @@ func _process(delta):
 
 func _on_deathzone_player_death():
 	print("game over")
-	$Player.reset($SpawnPoint.position)
+	$Player.reset($Start.get_spawn_pos())
 	pass # Replace with function body.
 
 
 func _on_trap_damage():
 	print('player damaged')
 	#probably need last checkpoint position
-	$Player.reset($SpawnPoint.position)
+	$Player.reset($Start.get_spawn_pos())
 	pass # Replace with function body.
