@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://bbm2hmpgina8a"]
+
+[ext_resource type="Script" path="res://scripts/level.gd" id="1_pgvgb"]
+[ext_resource type="PackedScene" uid="uid://cxwpbfsmwpgx" path="res://scenes/player.tscn" id="2_0s5st"]
+[ext_resource type="Texture2D" uid="uid://bg765dqxrb0fb" path="res://assets/textures/bg/Blue.png" id="3_uyit6"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_8awia"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mmj7r"]
+size = Vector2(427, 10)
+
+[node name="Level" type="Node2D"]
+script = ExtResource("1_pgvgb")
+
+[node name="Player" parent="." instance=ExtResource("2_0s5st")]
+position = Vector2(237, 163)
+slide_on_ceiling = false
+
+[node name="Ground" type="StaticBody2D" parent="."]
+position = Vector2(214, 184)
+physics_material_override = SubResource("PhysicsMaterial_8awia")
+
+[node name="Sprite2D" type="Sprite2D" parent="Ground"]
+modulate = Color(0, 0, 0, 1)
+scale = Vector2(6.6875, 0.175)
+texture = ExtResource("3_uyit6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_mmj7r")

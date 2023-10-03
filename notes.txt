@@ -1,0 +1,44 @@
+These assets are also pixel art so super low resolution and by default they are blurry.
+
+To fix this, click on sprite, then Texture, then change filter to Nearest.  
+Changing import settings on the images directly did nothing.
+
+This means anytime i delete any sprite and re-add I would need to set this again.  One
+workaround is to turn each sprite into a seperate scene.
+
+You can change the default texture rendering for the entire project in project settings.
+This will solve this problem for any pixel art project: 
+Project-> Project Settings -> Rendering -> Textures -> Default Texture Renderer -> Nearest
+
+The other issue is Sprites are super tiny for this project (32x32). 
+options are:
+	Scale the sprites up one by one. Meh.
+	Change project settings viewport width and height much smaller:
+		Project -> Project Settings -> Display -> Window -> Viewport Width -> 480 x 270
+		Now game is super small window, and if you expand, icons are tiny again, to fix this:
+		Project -> Project Settings -> Display ->Window -> Stretch -> Canvas_items
+		And we don't really want this default tiny window, to fix this:
+		Project -> project Settings -> Display (click Advanced Settings) -> Window -> Window W/H Override 
+
+This causes another issue with low res fonts down the road though.
+----
+
+Default input actions ui_select defaults to space, so we can listen for that to jump
+or shoot, and if shoot then use up to jump.  if you have both, use mouse to shoot.
+
+Use ui_cancel (ESC) for quit actions, like quit. 
+
+For game reset we could ui_accept (ENTER)
+
+GRAVITY in Godot is done manually, and you += to the y with delta to have player moving downward
+
+class_name at top of a script allows things like if body is Player
+
+You can also add multiple frames to a Sprite2D and then use an AnimationPlayer to do anim.
+Like unity this can animate any property on a node, and uses timeline.
+
+You can add a call method track to the animation player which is like an event trigger in Unity
+
+how to connect signals to every object of a specific type, using groups and arrays.
+
+Tilemaps introduction.
