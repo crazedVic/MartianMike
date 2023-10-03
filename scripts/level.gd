@@ -4,7 +4,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	get_window().position = Vector2(400,200)
+	get_window().position = Vector2(100,100)
 	$Player.position = $SpawnPoint.position
 	var traps = get_tree().get_nodes_in_group("traps")
 	for trap in traps:
