@@ -1,7 +1,22 @@
 [gd_scene load_steps=8 format=3 uid="uid://cyuv8ncxa8k6u"]
 
 [ext_resource type="Script" path="res://scripts/trap.gd" id="1_6yj06"]
-[ext_resource type="Texture2D" uid="uid://cyfwwwbc1yms4" path="res://assets/textures/bg/Green.png" id="2_eddk7"]
+[ext_resource type="PackedScene" uid="uid://brsg27uixsbge" path="res://scenes/tile_map.tscn" id="3_god1u"]
+
+[sub_resource type="Animation" id="Animation_anv26"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatableBody2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_anv26"]
 length = 0.001
@@ -25,7 +40,7 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("RigidBody2D:position")
+tracks/0/path = NodePath("AnimatableBody2D:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -45,6 +60,7 @@ _data = {
 rough = true
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7bhv3"]
+size = Vector2(47, 15)
 
 [node name="MovingBlock" type="Node2D" groups=["traps"]]
 script = ExtResource("1_6yj06")
@@ -55,13 +71,13 @@ libraries = {
 "": SubResource("AnimationLibrary_rwrri")
 }
 
-[node name="RigidBody2D" type="StaticBody2D" parent="."]
+[node name="AnimatableBody2D" type="AnimatableBody2D" parent="."]
 collision_layer = 2
 physics_material_override = SubResource("PhysicsMaterial_ohhmb")
 
-[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
-scale = Vector2(0.25, 0.251)
-texture = ExtResource("2_eddk7")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D"]
+position = Vector2(24.7151, -7.5)
 shape = SubResource("RectangleShape2D_7bhv3")
+
+[node name="TileMap" parent="AnimatableBody2D" instance=ExtResource("3_god1u")]
+layer_0/tile_data = PackedInt32Array(-65536, 786432, 4, -65535, 851968, 4, -65534, 917504, 4)
