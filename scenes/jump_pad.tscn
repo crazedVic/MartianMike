@@ -79,7 +79,7 @@ animations = [{
 "speed": 20.0
 }]
 
-[node name="JumpPad" type="Area2D"]
+[node name="JumpPad" type="Area2D" groups=["pads"]]
 collision_layer = 3
 script = ExtResource("1_pwevo")
 

@@ -1,14 +1,16 @@
 extends Node2D
 
-var traps = []
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	get_window().position = Vector2(400,200)
 	$Player.position = $SpawnPoint.position
-	traps = get_tree().get_nodes_in_group("traps")
+	var traps = get_tree().get_nodes_in_group("traps")
 	for trap in traps:
 		trap.damage.connect(_on_trap_damage)
+	var pads = get_tree().get_nodes_in_group("pads")
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

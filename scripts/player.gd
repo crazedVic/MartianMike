@@ -56,6 +56,7 @@ func update_animations():
 
 func reset(spawn_point):
 	position = spawn_point
+	velocity.y = 0
 	animated_sprite.play("idle") 
 	paused = true
 	$AnimationPlayer.play("flicker")

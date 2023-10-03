@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bbm2hmpgina8a"]
+[gd_scene load_steps=9 format=3 uid="uid://bbm2hmpgina8a"]
 
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_pgvgb"]
 [ext_resource type="PackedScene" uid="uid://cxwpbfsmwpgx" path="res://scenes/player.tscn" id="2_0s5st"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dfhny8kklo6f" path="res://scenes/jump_pad.tscn" id="5_oe7y6"]
 [ext_resource type="PackedScene" uid="uid://b1jnv84g1m5br" path="res://scenes/saw.tscn" id="5_xl3xl"]
 [ext_resource type="PackedScene" uid="uid://df53vyfwpthbl" path="res://scenes/spike_ball.tscn" id="6_kldc6"]
+[ext_resource type="PackedScene" uid="uid://cyuv8ncxa8k6u" path="res://scenes/moving_block.tscn" id="7_y602r"]
 [ext_resource type="PackedScene" uid="uid://brsg27uixsbge" path="res://scenes/tile_map.tscn" id="8_4fb8e"]
 
 [node name="Level" type="Node2D"]
@@ -18,15 +19,16 @@ position = Vector2(237, 163)
 position = Vector2(220, 288)
 
 [node name="SpawnPoint" type="Marker2D" parent="."]
-position = Vector2(144, 134)
+position = Vector2(133, 161)
 
 [node name="Traps" type="Node" parent="."]
 
 [node name="Saw" parent="Traps" instance=ExtResource("5_xl3xl")]
-position = Vector2(45, 178)
+visible = false
+position = Vector2(393, 5)
 
 [node name="Saw2" parent="Traps" instance=ExtResource("5_xl3xl")]
-position = Vector2(94, 178)
+position = Vector2(34, 65)
 
 [node name="Saw3" parent="Traps" instance=ExtResource("5_xl3xl")]
 position = Vector2(293, 179)
@@ -41,10 +43,20 @@ position = Vector2(182, 138)
 
 [node name="JumpPad" parent="Pads" instance=ExtResource("5_oe7y6")]
 position = Vector2(331, 179)
+strength = 299
+
+[node name="JumpPad2" parent="Pads" instance=ExtResource("5_oe7y6")]
+position = Vector2(34, 178)
+strength = 299
+
+[node name="MoveBlocks" type="Node" parent="."]
+
+[node name="MovingBlock" parent="MoveBlocks" instance=ExtResource("7_y602r")]
+position = Vector2(319, 74)
 
 [node name="Checkpoints" type="Node" parent="."]
 
 [node name="TileMap" parent="." instance=ExtResource("8_4fb8e")]
-layer_0/tile_data = PackedInt32Array(720896, 786432, 4, 720897, 851968, 4, 720898, 851968, 4, 720899, 851968, 4, 720900, 851968, 4, 720901, 851968, 4, 720902, 851968, 4, 720903, 851968, 4, 720904, 851968, 4, 720905, 851968, 4, 720906, 851968, 4, 720907, 851968, 4, 720908, 851968, 4, 720909, 851968, 4, 720910, 851968, 4, 720911, 851968, 4, 720912, 851968, 4, 720913, 851968, 4, 720914, 851968, 4, 720915, 851968, 4, 720916, 851968, 4, 720917, 851968, 4, 720918, 851968, 4, 720919, 851968, 4, 720920, 851968, 4, 720921, 851968, 4, 720922, 851968, 4, 720923, 917504, 4, 458774, 786432, 4, 458780, 917504, 4, 458775, 851968, 4, 458776, 851968, 4, 458777, 851968, 4, 458778, 851968, 4, 458779, 851968, 4)
+layer_0/tile_data = PackedInt32Array(720896, 786432, 4, 720897, 851968, 4, 720898, 851968, 4, 720899, 851968, 4, 720900, 851968, 4, 720901, 851968, 4, 720902, 851968, 4, 720903, 851968, 4, 720904, 851968, 4, 720905, 851968, 4, 720906, 851968, 4, 720907, 851968, 4, 720908, 851968, 4, 720909, 851968, 4, 720910, 851968, 4, 720911, 851968, 4, 720912, 851968, 4, 720913, 851968, 4, 720914, 851968, 4, 720915, 851968, 4, 720916, 851968, 4, 720917, 851968, 4, 720918, 851968, 4, 720919, 851968, 4, 720920, 851968, 4, 720921, 851968, 4, 720922, 851968, 4, 720923, 917504, 4, 458774, 786432, 5, 196611, 983040, 5, 262147, 983040, 5, 327683, 983040, 5, 393219, 983040, 6, 131075, 983040, 4, 196612, 786432, 5, 393220, 786432, 4, 393221, 851968, 4, 65542, 786432, 5, 393222, 917504, 4, -131058, 851968, 5, -65522, 851968, 6, -131057, 917504, 5, -65521, 917504, 6, 18, 851968, 5, 65554, 851968, 6, 19, 917504, 5, 65555, 917504, 6, -327662, 851968, 5, -262126, 851968, 6, -327661, 917504, 5, -262125, 917504, 6, 24, 851968, 5, 65560, 851968, 6, 25, 917504, 5, 65561, 917504, 6, 393236, 917504, 4, 393235, 851968, 4, 393234, 786432, 4, 8, 851968, 6, 9, 917504, 6, -65528, 851968, 5, -65527, 917504, 5, 327695, 786432, 5, 262156, 786432, 5, 327689, 786432, 5, -458738, 786432, 4, -458737, 851968, 4, -458736, 917504, 4, -589814, 786432, 4, -589813, 851968, 4, -589812, 917504, 4, -720881, 786432, 4, -720880, 851968, 4, -720879, 917504, 4, -851958, 786432, 4, -851957, 851968, 4, -851956, 917504, 4, -983035, 786432, 4, -983034, 851968, 4, -983033, 917504, 4, -786431, 786432, 4, -786430, 851968, 4, -786429, 917504, 4, -917509, 786432, 4, -917508, 851968, 4, -917507, 917504, 4, -1114114, 786432, 4, -1114113, 851968, 4, -1179648, 917504, 4, -851972, 786432, 4, -851971, 851968, 4, -851970, 917504, 4, -1179646, 983040, 5, -1114110, 983040, 5, -1048574, 983040, 6, -1310718, 786432, 4, -1245182, 983040, 5, -1310717, 851968, 4, -1310716, 917504, 4)
 
 [connection signal="player_death" from="Deathzone" to="." method="_on_deathzone_player_death"]
