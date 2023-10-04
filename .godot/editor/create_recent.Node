@@ -1,3 +1,5 @@
+CanvasLayer
+Label
 CollisionShape2D
 StaticBody2D
 AnimatedSprite2D

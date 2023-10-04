@@ -1,10 +1,7 @@
-res://scenes/exit_position.tscn
-res://scripts/exit_position.gd
-res://scenes/level.tscn
-res://scripts/player.gd
+res://scenes/levels/level.tscn
 res://scripts/level.gd
-res://scenes/level_2.tscn
 res://scenes/levels/level_2.tscn
 res://scenes/levels/level_3.tscn
-res://scenes/death_zone.tscn
-res://scenes/levels/level.tscn
+res://scripts/player.gd
+res://scenes/hud.tscn
+res://scripts/hud.gd

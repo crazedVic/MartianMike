@@ -8,6 +8,8 @@ class_name Player
 
 @onready var animated_sprite = $AnimatedSprite2D
 
+signal active #emitted when unpaused
+
 var paused:bool = false
 var direction:float = 0
 var last_known_position:Vector2
@@ -64,6 +66,7 @@ func reset(spawn_point):
 	
 func resume():
 	paused = false
+	active.emit()
 	
 func pause():
 	paused = true

@@ -1,7 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://bbm2hmpgina8a"]
+[gd_scene load_steps=15 format=3 uid="uid://bbm2hmpgina8a"]
 
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_hvcjh"]
 [ext_resource type="PackedScene" uid="uid://cuwqihy886jeu" path="res://scenes/levels/level_2.tscn" id="2_lvwuw"]
+[ext_resource type="PackedScene" uid="uid://mpisq67qatdp" path="res://scenes/hud.tscn" id="3_0kmgk"]
 [ext_resource type="PackedScene" uid="uid://cbj078eirri6y" path="res://scenes/background.tscn" id="3_w0ku7"]
 [ext_resource type="Texture2D" uid="uid://dvh57rsnripb7" path="res://assets/textures/bg/Brown.png" id="4_w25eu"]
 [ext_resource type="PackedScene" uid="uid://brsg27uixsbge" path="res://scenes/tile_map.tscn" id="5_h8m52"]
@@ -17,6 +18,8 @@
 [node name="Level" type="Node2D"]
 script = ExtResource("1_hvcjh")
 next_level = ExtResource("2_lvwuw")
+
+[node name="HUD" parent="." instance=ExtResource("3_0kmgk")]
 
 [node name="Background" parent="." instance=ExtResource("3_w0ku7")]
 image_texture = ExtResource("4_w25eu")
