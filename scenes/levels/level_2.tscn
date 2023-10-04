@@ -1,0 +1,28 @@
+[gd_scene load_steps=9 format=3 uid="uid://cuwqihy886jeu"]
+
+[ext_resource type="PackedScene" uid="uid://cxwpbfsmwpgx" path="res://scenes/player.tscn" id="1_5fpj3"]
+[ext_resource type="Script" path="res://scripts/level.gd" id="1_6b56k"]
+[ext_resource type="PackedScene" uid="uid://cbj078eirri6y" path="res://scenes/background.tscn" id="2_eiotp"]
+[ext_resource type="PackedScene" uid="uid://brsg27uixsbge" path="res://scenes/tile_map.tscn" id="3_aoy0o"]
+[ext_resource type="Texture2D" uid="uid://daudywhr4mgnj" path="res://assets/textures/bg/Yellow.png" id="3_dcmoa"]
+[ext_resource type="PackedScene" uid="uid://c7nijh44akeg6" path="res://scenes/spawn_position.tscn" id="4_mc2l0"]
+[ext_resource type="PackedScene" uid="uid://bonelpj8bwayn" path="res://scenes/exit_position.tscn" id="5_3rhwb"]
+[ext_resource type="PackedScene" uid="uid://cqg6ux1di5vxo" path="res://scenes/death_zone.tscn" id="6_1eirj"]
+
+[node name="Level_2" type="Node2D"]
+script = ExtResource("1_6b56k")
+
+[node name="Background" parent="." instance=ExtResource("2_eiotp")]
+image_texture = ExtResource("3_dcmoa")
+
+[node name="TileMap" parent="." instance=ExtResource("3_aoy0o")]
+
+[node name="Deathzone" parent="." instance=ExtResource("6_1eirj")]
+position = Vector2(241, 283)
+
+[node name="Start" parent="." instance=ExtResource("4_mc2l0")]
+
+[node name="Exit" parent="." instance=ExtResource("5_3rhwb")]
+
+[node name="Player" parent="." instance=ExtResource("1_5fpj3")]
+position = Vector2(241, 135)
