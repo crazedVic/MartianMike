@@ -12,6 +12,7 @@ var time_left:float = 0
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	get_window().position = Vector2(100,100)
+	$UI.show_game_over(false)
 	
 	$Player.active.connect(_on_player_ready)
 	$Player.position = $Start.get_spawn_pos()
@@ -49,7 +50,11 @@ func _on_level_complete():
 	reset_timer()
 	level_complete = true
 	$Player.pause()
-	await get_tree().create_timer(1.5).timeout
+	await get_tree().create_timer(2.0).timeout
+	if !next_level: # if there is no next level, show game over.
+		$UI.show_game_over(true)
+	else:
+		get_tree().change_scene_to_packed(next_level)
 
 func _on_level_timeout():
 	# this fires every second
@@ -60,10 +65,10 @@ func _on_level_timeout():
 			print("timer has run out")
 			reset_timer()
 			$Player.reset($Start.get_spawn_pos())
-	$HUD.update_timer_label(level_time_limit - time_left)	
+	$UI/HUD.update_timer_label(level_time_limit - time_left)	
 			
 func reset_timer():
-	$HUD.update_timer_label(level_time_limit)
+	$UI/HUD.update_timer_label(level_time_limit)
 	time_left = 0
 	timer_node.stop()
 	

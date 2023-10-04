@@ -2,27 +2,28 @@
 
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_hvcjh"]
 [ext_resource type="PackedScene" uid="uid://cuwqihy886jeu" path="res://scenes/levels/level_2.tscn" id="2_lvwuw"]
-[ext_resource type="PackedScene" uid="uid://mpisq67qatdp" path="res://scenes/hud.tscn" id="3_0kmgk"]
 [ext_resource type="PackedScene" uid="uid://cbj078eirri6y" path="res://scenes/background.tscn" id="3_w0ku7"]
 [ext_resource type="Texture2D" uid="uid://dvh57rsnripb7" path="res://assets/textures/bg/Brown.png" id="4_w25eu"]
+[ext_resource type="PackedScene" uid="uid://d3ds6p0y5a347" path="res://scenes/UI/ui.tscn" id="5_7chuo"]
 [ext_resource type="PackedScene" uid="uid://brsg27uixsbge" path="res://scenes/tile_map.tscn" id="5_h8m52"]
-[ext_resource type="PackedScene" uid="uid://c7nijh44akeg6" path="res://scenes/spawn_position.tscn" id="6_lmhd0"]
+[ext_resource type="PackedScene" uid="uid://c7nijh44akeg6" path="res://scenes/Objects/spawn_position.tscn" id="6_lmhd0"]
 [ext_resource type="PackedScene" uid="uid://cqg6ux1di5vxo" path="res://scenes/death_zone.tscn" id="7_libru"]
-[ext_resource type="PackedScene" uid="uid://b1jnv84g1m5br" path="res://scenes/saw.tscn" id="8_yn11h"]
-[ext_resource type="PackedScene" uid="uid://df53vyfwpthbl" path="res://scenes/spike_ball.tscn" id="9_mhkx3"]
-[ext_resource type="PackedScene" uid="uid://dfhny8kklo6f" path="res://scenes/jump_pad.tscn" id="10_we2b0"]
-[ext_resource type="PackedScene" uid="uid://cyuv8ncxa8k6u" path="res://scenes/moving_block.tscn" id="11_dnlco"]
-[ext_resource type="PackedScene" uid="uid://bonelpj8bwayn" path="res://scenes/exit_position.tscn" id="12_yf8td"]
+[ext_resource type="PackedScene" uid="uid://b1jnv84g1m5br" path="res://scenes/Objects/saw.tscn" id="8_yn11h"]
+[ext_resource type="PackedScene" uid="uid://df53vyfwpthbl" path="res://scenes/Objects/spike_ball.tscn" id="9_mhkx3"]
+[ext_resource type="PackedScene" uid="uid://dfhny8kklo6f" path="res://scenes/Objects/jump_pad.tscn" id="10_we2b0"]
+[ext_resource type="PackedScene" uid="uid://cyuv8ncxa8k6u" path="res://scenes/Objects/moving_block.tscn" id="11_dnlco"]
+[ext_resource type="PackedScene" uid="uid://bonelpj8bwayn" path="res://scenes/Objects/exit_position.tscn" id="12_yf8td"]
 [ext_resource type="PackedScene" uid="uid://cxwpbfsmwpgx" path="res://scenes/player.tscn" id="13_8i7q6"]
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_hvcjh")
 next_level = ExtResource("2_lvwuw")
-
-[node name="HUD" parent="." instance=ExtResource("3_0kmgk")]
+level_time_limit = 55.0
 
 [node name="Background" parent="." instance=ExtResource("3_w0ku7")]
 image_texture = ExtResource("4_w25eu")
+
+[node name="UI" parent="." instance=ExtResource("5_7chuo")]
 
 [node name="TileMap" parent="." instance=ExtResource("5_h8m52")]
 position = Vector2(1, 58)

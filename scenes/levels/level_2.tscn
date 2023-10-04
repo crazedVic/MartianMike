@@ -1,28 +1,37 @@
-[gd_scene load_steps=9 format=3 uid="uid://cuwqihy886jeu"]
+[gd_scene load_steps=11 format=3 uid="uid://cuwqihy886jeu"]
 
 [ext_resource type="PackedScene" uid="uid://cxwpbfsmwpgx" path="res://scenes/player.tscn" id="1_5fpj3"]
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_6b56k"]
+[ext_resource type="PackedScene" uid="uid://hautbc8grf3q" path="res://scenes/levels/level_3.tscn" id="2_67ghn"]
 [ext_resource type="PackedScene" uid="uid://cbj078eirri6y" path="res://scenes/background.tscn" id="2_eiotp"]
 [ext_resource type="PackedScene" uid="uid://brsg27uixsbge" path="res://scenes/tile_map.tscn" id="3_aoy0o"]
 [ext_resource type="Texture2D" uid="uid://daudywhr4mgnj" path="res://assets/textures/bg/Yellow.png" id="3_dcmoa"]
-[ext_resource type="PackedScene" uid="uid://c7nijh44akeg6" path="res://scenes/spawn_position.tscn" id="4_mc2l0"]
-[ext_resource type="PackedScene" uid="uid://bonelpj8bwayn" path="res://scenes/exit_position.tscn" id="5_3rhwb"]
+[ext_resource type="PackedScene" uid="uid://d3ds6p0y5a347" path="res://scenes/UI/ui.tscn" id="4_6oyv1"]
+[ext_resource type="PackedScene" uid="uid://c7nijh44akeg6" path="res://scenes/Objects/spawn_position.tscn" id="4_mc2l0"]
+[ext_resource type="PackedScene" uid="uid://bonelpj8bwayn" path="res://scenes/Objects/exit_position.tscn" id="5_3rhwb"]
 [ext_resource type="PackedScene" uid="uid://cqg6ux1di5vxo" path="res://scenes/death_zone.tscn" id="6_1eirj"]
 
-[node name="Level_2" type="Node2D"]
+[node name="Level" type="Node2D"]
 script = ExtResource("1_6b56k")
+next_level = ExtResource("2_67ghn")
+level_time_limit = 55.0
 
 [node name="Background" parent="." instance=ExtResource("2_eiotp")]
 image_texture = ExtResource("3_dcmoa")
 
+[node name="UI" parent="." instance=ExtResource("4_6oyv1")]
+
 [node name="TileMap" parent="." instance=ExtResource("3_aoy0o")]
+layer_0/tile_data = PackedInt32Array(917509, 458752, 0, 983045, 458752, 1, 1048581, 393216, 2, 1048582, 458752, 2, 1048583, 458752, 2, 1048584, 458752, 2, 983048, 458752, 1, 983047, 458752, 1, 917511, 458752, 0, 917510, 458752, 0, 983046, 458752, 1, 917512, 458752, 0, 917513, 458752, 0, 917514, 458752, 0, 983050, 458752, 1, 1048586, 458752, 2, 1048585, 458752, 2, 983049, 458752, 1, 1048609, 524288, 2, 983073, 524288, 1, 917537, 524288, 0, 1048608, 458752, 2, 983072, 458752, 1, 917536, 458752, 0, 1048607, 458752, 2, 983071, 458752, 1, 917535, 458752, 0, 1048606, 458752, 2, 983070, 458752, 1, 917534, 458752, 0, 1048605, 458752, 2, 983069, 458752, 1, 917533, 458752, 0, 1048604, 458752, 2, 983068, 458752, 1, 917532, 458752, 0, 1048603, 458752, 2, 983067, 458752, 1, 917531, 458752, 0, 1048602, 458752, 2, 983066, 458752, 1, 917530, 458752, 0, 1048601, 458752, 2, 983065, 458752, 1, 917529, 458752, 0, 1048600, 458752, 2, 983064, 458752, 1, 917528, 458752, 0, 1048599, 458752, 2, 983063, 458752, 1, 917527, 458752, 0, 1048598, 458752, 2, 983062, 458752, 1, 917526, 589824, 1, 1048597, 458752, 2, 983061, 458752, 1, 917525, 458752, 1, 1048596, 458752, 2, 983060, 458752, 1, 917524, 458752, 1, 1048595, 458752, 2, 983059, 458752, 1, 917523, 458752, 1, 1048594, 458752, 2, 983058, 458752, 1, 917522, 458752, 1, 1048593, 458752, 2, 983057, 458752, 1, 917521, 458752, 1, 1048592, 458752, 2, 983056, 458752, 1, 917520, 655360, 1, 1048591, 458752, 2, 983055, 458752, 1, 917519, 458752, 0, 1048590, 458752, 2, 983054, 458752, 1, 917518, 458752, 0, 1048589, 458752, 2, 983053, 458752, 1, 917517, 458752, 0, 1048588, 458752, 2, 983052, 458752, 1, 917516, 458752, 0, 1048587, 458752, 2, 983051, 458752, 1, 917515, 458752, 0, 851990, 524288, 1, 786454, 524288, 0, 851989, 458752, 1, 786453, 458752, 0, 851988, 458752, 1, 786452, 589824, 1, 851987, 458752, 1, 786451, 458752, 1, 851986, 458752, 1, 786450, 655360, 1, 851985, 458752, 1, 786449, 458752, 0, 851984, 393216, 1, 786448, 393216, 0, 720916, 524288, 1, 655380, 524288, 0, 720915, 458752, 1, 655379, 458752, 0, 720914, 393216, 1, 655378, 393216, 0)
 
 [node name="Deathzone" parent="." instance=ExtResource("6_1eirj")]
 position = Vector2(241, 283)
 
 [node name="Start" parent="." instance=ExtResource("4_mc2l0")]
+position = Vector2(104, 223)
 
 [node name="Exit" parent="." instance=ExtResource("5_3rhwb")]
+position = Vector2(449, 192)
 
 [node name="Player" parent="." instance=ExtResource("1_5fpj3")]
-position = Vector2(241, 135)
+position = Vector2(111, 204)

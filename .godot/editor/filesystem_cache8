@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1696436728
+::res://::1696444558
 icon.svg::CompressedTexture2D::3485374602821825027::1696262664::1696262675::1::::<><>::
 notes.txt::TextFile::-1::1696290734::0::1::::<><>::
 README.md::TextFile::-1::1696294421::0::1::::<><>::
@@ -32,28 +32,36 @@ Fall (32x32).png::CompressedTexture2D::8062866208014929114::1696262827::16962637
 Idle (32x32).png::CompressedTexture2D::5792788246708732468::1696262827::1696263744::1::::<><>::
 Jump (32x32).png::CompressedTexture2D::134179712127856016::1696262827::1696263744::1::::<><>::
 Run (32x32).png::CompressedTexture2D::2329309861628149254::1696262827::1696263744::1::::<><>::
-::res://scenes/::1696436694
-background.tscn::PackedScene::4863186420871542766::1696369511::0::1::::<><>::uid://vwq4hiip6ykr::::res://assets/textures/bg/Purple.png<>res://scripts/background.gd
+::res://scenes/::1696444558
+background.tscn::PackedScene::4863186420871542766::1696369511::0::1::::<><>::uid://vwq4hiip6ykr
 checkpoint.tscn::PackedScene::7530156027976933299::1696369511::0::1::::<><>::
 death_zone.tscn::PackedScene::5910168323123106496::1696436694::0::1::::<><>::res://scripts/death_zone.gd
-exit_position.tscn::PackedScene::3396164720387413981::1696436694::0::1::::<><>::uid://d1k3ysd2k8yap::::res://assets/textures/other/End (Pressed) (64x64).png<>res://scripts/exit_position.gd
-jump_pad.tscn::PackedScene::221337965961641299::1696299293::0::1::::<><>::uid://b8sq7aonph4ym::::res://assets/textures/other/Jump (28x28).png<>res://scripts/jump_pad.gd<>uid://dhberfxdvncv2::::res://assets/textures/other/Idle.png
+player.tscn::PackedScene::189220997451003407::1696369511::0::1::::<><>::uid://dm4yh1c4kb2t7
+saw.tscn::PackedScene::4230738619024194347::1696369511::0::1::::<><>::uid://dvbhrve5hpm5a
+tile_map.tscn::PackedScene::3617204055542979412::1696369511::0::1::::<><>::uid://dsnwmv0e0k5ns
+::res://scenes/levels/::1696444558
+level.tscn::PackedScene::2483034573477962826::1696444558::0::1::::<><>::res://scripts/level.gd<>uid://cuwqihy886jeu::::res://scenes/levels/level_2.tscn<>uid://cbj078eirri6y::::res://scenes/background.tscn<>uid://dvh57rsnripb7::::res://assets/textures/bg/Brown.png<>uid://d3ds6p0y5a347::::res://scenes/UI/ui.tscn<>uid://brsg27uixsbge::::res://scenes/tile_map.tscn<>uid://c7nijh44akeg6::::res://scenes/Objects/spawn_position.tscn<>uid://cqg6ux1di5vxo::::res://scenes/death_zone.tscn<>uid://b1jnv84g1m5br::::res://scenes/saw.tscn<>uid://df53vyfwpthbl::::res://scenes/Objects/spike_ball.tscn<>uid://dfhny8kklo6f::::res://scenes/Objects/jump_pad.tscn<>uid://cyuv8ncxa8k6u::::res://scenes/Objects/moving_block.tscn<>uid://bonelpj8bwayn::::res://scenes/Objects/exit_position.tscn<>uid://cxwpbfsmwpgx::::res://scenes/player.tscn
+level_2.tscn::PackedScene::6223020715255121512::1696444532::0::1::::<><>::uid://cxwpbfsmwpgx::::res://scenes/player.tscn<>res://scripts/level.gd<>uid://hautbc8grf3q::::res://scenes/levels/level_3.tscn<>uid://cbj078eirri6y::::res://scenes/background.tscn<>uid://brsg27uixsbge::::res://scenes/tile_map.tscn<>uid://daudywhr4mgnj::::res://assets/textures/bg/Yellow.png<>uid://d3ds6p0y5a347::::res://scenes/UI/ui.tscn<>uid://c7nijh44akeg6::::res://scenes/Objects/spawn_position.tscn<>uid://bonelpj8bwayn::::res://scenes/Objects/exit_position.tscn<>uid://cqg6ux1di5vxo::::res://scenes/death_zone.tscn
+level_3.tscn::PackedScene::492570232526769892::1696444532::0::1::::<><>::res://scripts/level.gd<>uid://cbj078eirri6y::::res://scenes/background.tscn<>uid://bcnuh700qyq6o::::res://assets/textures/bg/Gray.png<>uid://brsg27uixsbge::::res://scenes/tile_map.tscn<>uid://d3ds6p0y5a347::::res://scenes/UI/ui.tscn<>uid://cqg6ux1di5vxo::::res://scenes/death_zone.tscn<>uid://c7nijh44akeg6::::res://scenes/Objects/spawn_position.tscn<>uid://bonelpj8bwayn::::res://scenes/Objects/exit_position.tscn<>uid://cxwpbfsmwpgx::::res://scenes/player.tscn<>uid://dfhny8kklo6f::::res://scenes/Objects/jump_pad.tscn
+::res://scenes/Objects/::1696444558
+exit_position.tscn::PackedScene::3396164720387413981::1696444481::0::1::::<><>::uid://d1k3ysd2k8yap
+jump_pad.tscn::PackedScene::221337965961641299::1696299293::0::1::::<><>::uid://b8sq7aonph4ym
 moving_block.tscn::PackedScene::6499995844766617282::1696367478::0::1::::<><>::res://scripts/trap.gd<>uid://brsg27uixsbge::::res://scenes/tile_map.tscn
-player.tscn::PackedScene::189220997451003407::1696369511::0::1::::<><>::uid://dm4yh1c4kb2t7::::res://assets/textures/player/Fall (32x32).png<>res://scripts/player.gd<>uid://coscm10xyh301::::res://assets/textures/player/Idle (32x32).png<>uid://8glnmot2sb0q::::res://assets/textures/player/Run (32x32).png<>uid://b586j2xxbvt5::::res://assets/textures/player/Jump (32x32).png
-saw.tscn::PackedScene::4230738619024194347::1696369511::0::1::::<><>::uid://dvbhrve5hpm5a::::res://assets/textures/other/Saw.png<>res://scripts/trap.gd
-spawn_position.tscn::PackedScene::7046223496474095531::1696369511::0::1::::<><>::res://scripts/spawn_position.gd<>uid://b71dbjl66hwhw::::res://assets/textures/other/Start.png
+spawn_position.tscn::PackedScene::7046223496474095531::1696369511::0::1::::<><>::res://scripts/spawn_position.gd<>uid://b71dbjl66hwhw
 spike_ball.tscn::PackedScene::7573876448665526993::1696369511::0::1::::<><>::res://scripts/trap.gd<>uid://cx67eg60ny0ig::::res://assets/textures/other/Spiked Ball.png
-tile_map.tscn::PackedScene::3617204055542979412::1696369511::0::1::::<><>::uid://dsnwmv0e0k5ns::::res://assets/textures/Terrain (16x16).png
-::res://scenes/levels/::1696436694
-level.tscn::PackedScene::2483034573477962826::1696436694::0::1::::<><>::res://scripts/level.gd<>uid://cuwqihy886jeu::::res://scenes/levels/level_2.tscn<>uid://cbj078eirri6y::::res://scenes/background.tscn<>uid://dvh57rsnripb7::::res://assets/textures/bg/Brown.png<>uid://brsg27uixsbge::::res://scenes/tile_map.tscn<>uid://c7nijh44akeg6::::res://scenes/spawn_position.tscn<>uid://cqg6ux1di5vxo::::res://scenes/death_zone.tscn<>uid://b1jnv84g1m5br::::res://scenes/saw.tscn<>uid://df53vyfwpthbl::::res://scenes/spike_ball.tscn<>uid://dfhny8kklo6f::::res://scenes/jump_pad.tscn<>uid://cyuv8ncxa8k6u::::res://scenes/moving_block.tscn<>uid://bonelpj8bwayn::::res://scenes/exit_position.tscn<>uid://cxwpbfsmwpgx::::res://scenes/player.tscn
-level_2.tscn::PackedScene::6223020715255121512::1696436694::0::1::::<><>::uid://cxwpbfsmwpgx::::res://scenes/player.tscn<>res://scripts/level.gd<>uid://cbj078eirri6y::::res://scenes/background.tscn<>uid://brsg27uixsbge::::res://scenes/tile_map.tscn<>uid://daudywhr4mgnj::::res://assets/textures/bg/Yellow.png<>uid://c7nijh44akeg6::::res://scenes/spawn_position.tscn<>uid://bonelpj8bwayn::::res://scenes/exit_position.tscn<>uid://cqg6ux1di5vxo::::res://scenes/death_zone.tscn
-level_3.tscn::PackedScene::492570232526769892::1696436694::0::1::::<><>::res://scripts/level.gd<>uid://cbj078eirri6y::::res://scenes/background.tscn<>uid://bcnuh700qyq6o::::res://assets/textures/bg/Gray.png<>uid://brsg27uixsbge::::res://scenes/tile_map.tscn<>uid://cqg6ux1di5vxo::::res://scenes/death_zone.tscn<>uid://c7nijh44akeg6::::res://scenes/spawn_position.tscn<>uid://bonelpj8bwayn::::res://scenes/exit_position.tscn<>uid://cxwpbfsmwpgx::::res://scenes/player.tscn
-::res://scripts/::1696436694
+::res://scenes/UI/::1696444481
+game_over.tscn::PackedScene::1789053641332265601::1696444481::0::1::::<><>::res://scripts/game_over.gd<>uid://c463my81o07jm::::res://assets/fonts/Kenney Pixel Square.ttf
+hud.tscn::PackedScene::873750559937581313::1696443610::0::1::::<><>::uid://c463my81o07jm
+ui.tscn::PackedScene::9131891899288173578::1696444471::0::1::::<><>::uid://mpisq67qatdp
+::res://scripts/::1696444284
 background.gd::GDScript::-1::1696368552::0::1::::<>ParallaxBackground<>::
 death_zone.gd::GDScript::-1::1696436694::0::1::::<>Area2D<>::
 exit_position.gd::GDScript::-1::1696436694::0::1::::<>Area2D<>::
+game_over.gd::GDScript::-1::1696443732::0::1::::<>Control<>::
+hud.gd::GDScript::-1::1696443478::0::1::::<>Control<>::
 jump_pad.gd::GDScript::-1::1696281911::0::1::::JumpPad<>Area2D<>::
-level.gd::GDScript::-1::1696436694::0::1::::<>Node2D<>::
-player.gd::GDScript::-1::1696436694::0::1::::Player<>CharacterBody2D<>::
+level.gd::GDScript::-1::1696444284::0::1::::<>Node2D<>::
+player.gd::GDScript::-1::1696438662::0::1::::Player<>CharacterBody2D<>::
 spawn_position.gd::GDScript::-1::1696368838::0::1::::<>StaticBody2D<>::
 trap.gd::GDScript::-1::1696299695::0::1::::Trap<>Node2D<>::
+ui.gd::GDScript::-1::1696443667::0::1::::<>CanvasLayer<>::

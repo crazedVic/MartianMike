@@ -5,3 +5,11 @@ res://scenes/levels/level_3.tscn
 res://scripts/player.gd
 res://scenes/hud.tscn
 res://scripts/hud.gd
+res://scenes/game_over.tscn
+res://scripts/game_over.gd
+res://scenes/ui.tscn
+res://scripts/ui.gd
+res://scenes/exit_position.tscn
+res://scenes/UI/game_over.tscn
+res://scenes/UI/main_menu.tscn
+res://scripts/main_menu.gd

@@ -1,5 +1,10 @@
+TextureRect
+Node
+Control
 CanvasLayer
+Button
 Label
+ColorRect
 CollisionShape2D
 StaticBody2D
 AnimatedSprite2D
@@ -11,7 +16,6 @@ ParallaxLayer
 ParallaxBackground
 AnimatableBody2D
 RigidBody2D
-Node
 TileMap
 AnimationPlayer
 Camera2D

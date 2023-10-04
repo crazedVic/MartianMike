@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://d3ds6p0y5a347"]
+
+[ext_resource type="PackedScene" uid="uid://mpisq67qatdp" path="res://scenes/UI/hud.tscn" id="1_daksg"]
+[ext_resource type="Script" path="res://scripts/ui.gd" id="1_xloeq"]
+[ext_resource type="PackedScene" uid="uid://0qvpmu5plahl" path="res://scenes/UI/game_over.tscn" id="2_ydqm3"]
+
+[node name="UI" type="CanvasLayer"]
+script = ExtResource("1_xloeq")
+
+[node name="HUD" parent="." instance=ExtResource("1_daksg")]
+
+[node name="GameOver" parent="." instance=ExtResource("2_ydqm3")]
+visible = false

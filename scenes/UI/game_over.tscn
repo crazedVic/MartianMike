@@ -1,0 +1,65 @@
+[gd_scene load_steps=4 format=3 uid="uid://0qvpmu5plahl"]
+
+[ext_resource type="Script" path="res://scripts/game_over.gd" id="1_brnx0"]
+[ext_resource type="FontFile" uid="uid://c463my81o07jm" path="res://assets/fonts/Kenney Pixel Square.ttf" id="2_y53b6"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_uijq1"]
+font = ExtResource("2_y53b6")
+font_size = 41
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+
+[node name="GameOver" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_brnx0")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.14902, 0.14902, 0.14902, 0.870588)
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -104.0
+offset_top = -50.0
+offset_right = 104.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "YOU WIN!"
+label_settings = SubResource("LabelSettings_uijq1")
+horizontal_alignment = 1
+
+[node name="Play" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -76.0
+offset_top = -115.0
+offset_right = 76.0
+offset_bottom = -75.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_y53b6")
+theme_override_font_sizes/font_size = 16
+text = "Menu
+"
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
