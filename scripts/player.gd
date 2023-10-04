@@ -35,8 +35,9 @@ func _physics_process(delta):
 func _process(delta):
 	# Handle Inputs
 	direction =  Input.get_axis("ui_left","ui_right")
-		
-	if Input.is_action_just_pressed("ui_select") and is_on_floor():
+	
+	#TODO: in the line below uncomment to disable double jump
+	if Input.is_action_just_pressed("ui_select"): # and is_on_floor():
 		jump(jump_force)
 		
 func update_animations():
@@ -58,11 +59,14 @@ func reset(spawn_point):
 	position = spawn_point
 	velocity.y = 0
 	animated_sprite.play("idle") 
-	paused = true
+	pause()
 	$AnimationPlayer.play("flicker")
 	
 func resume():
 	paused = false
+	
+func pause():
+	paused = true
 	
 func jump(force):
 	velocity.y = -force

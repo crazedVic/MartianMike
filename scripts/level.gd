@@ -1,6 +1,10 @@
 extends Node2D
 
 var player = null
+var level_complete:bool = false
+@onready var exit = $Exit
+
+@export var next_level:PackedScene = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -11,7 +15,7 @@ func _ready():
 	for trap in traps:
 		trap.damage.connect(_on_trap_damage)
 	var pads = get_tree().get_nodes_in_group("pads")
-	
+	exit.complete.connect(_on_level_complete)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -21,16 +25,21 @@ func _process(delta):
 	elif Input.is_action_just_pressed("ui_accept"): # ENTER 
 		print("restart game")
 		get_tree().reload_current_scene()
+		
+	if level_complete and Input.is_action_just_pressed("ui_select") and next_level != null:
+		get_tree().change_scene_to_packed(next_level)
 
+func _on_level_complete():
+	print("Level Complete")
+	$Player.pause()
+	await get_tree().create_timer(1.5).timeout
+	level_complete = true
 
 func _on_deathzone_player_death():
 	print("game over")
 	$Player.reset($Start.get_spawn_pos())
-	pass # Replace with function body.
-
 
 func _on_trap_damage():
 	print('player damaged')
 	#probably need last checkpoint position
 	$Player.reset($Start.get_spawn_pos())
-	pass # Replace with function body.
