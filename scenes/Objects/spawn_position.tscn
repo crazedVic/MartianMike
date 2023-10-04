@@ -148,4 +148,4 @@ position = Vector2(11, -2.5)
 shape = SubResource("RectangleShape2D_yb057")
 
 [node name="Spawn Position" type="Marker2D" parent="."]
-position = Vector2(11, -31)
+position = Vector2(11, -19)

@@ -41,6 +41,7 @@ func _process(delta):
 	#TODO: in the line below uncomment to disable double jump
 	if Input.is_action_just_pressed("ui_select"): # and is_on_floor():
 		jump(jump_force)
+		AudioPlayer.play_sfx("jump")
 		
 func update_animations():
 	#handle sprite appearance
@@ -72,4 +73,5 @@ func pause():
 	paused = true
 	
 func jump(force):
+	AudioPlayer.play_sfx("jump")
 	velocity.y = -force

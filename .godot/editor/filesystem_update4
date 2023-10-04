@@ -15,3 +15,7 @@ res://scenes/UI/main_menu.tscn
 res://scripts/main_menu.gd
 res://scripts/manager.gd
 res://scripts/game_manager.gd
+res://scenes/music_player.tscn
+res://scenes/audio_player.tscn
+res://scripts/audio_player.gd
+res://scenes/Objects/spawn_position.tscn

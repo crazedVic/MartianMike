@@ -7,6 +7,7 @@ extends Node
 # to loop music you have to double click on the ogg file and turn on looping
 
 # We can just audo load the AudioStreamPlayer node in project settings
+# But then how do we adjust the properties from a settings screen?
 
 func _ready():
 	print ("Game Manager Ready")

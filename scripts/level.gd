@@ -77,11 +77,13 @@ func _on_player_ready():
 	timer_node.start()
 
 func _on_deathzone_player_death():
+	AudioPlayer.play_sfx("hurt")
 	reset_timer()
 	print("game over")
 	$Player.reset($Start.get_spawn_pos())
 
 func _on_trap_damage():
+	AudioPlayer.play_sfx("hurt")
 	print('player damaged')
 	reset_timer()
 	#probably need last checkpoint position

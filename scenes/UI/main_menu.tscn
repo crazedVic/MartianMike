@@ -73,5 +73,19 @@ grow_horizontal = 2
 grow_vertical = 0
 text = "QUIT"
 
+[node name="MusicToggle" type="CheckButton" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -44.0
+offset_top = -24.0
+grow_horizontal = 0
+grow_vertical = 0
+button_pressed = true
+
 [connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="MusicToggle" to="." method="_on_music_toggle_pressed"]

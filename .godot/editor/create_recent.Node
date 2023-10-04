@@ -1,6 +1,7 @@
 AudioStreamPlayer
-TextureRect
 Node
+CheckButton
+TextureRect
 Control
 CanvasLayer
 Button
