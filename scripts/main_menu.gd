@@ -17,7 +17,6 @@ func _on_start_pressed():
 	get_tree().change_scene_to_file("res://scenes/levels/level.tscn")
 
 func _on_music_toggle_pressed():
-	print('toggling music')
 	if music_player.is_playing():
 		# enable or disable music
 		music_player.stop()
