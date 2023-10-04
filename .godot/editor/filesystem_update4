@@ -13,3 +13,5 @@ res://scenes/exit_position.tscn
 res://scenes/UI/game_over.tscn
 res://scenes/UI/main_menu.tscn
 res://scripts/main_menu.gd
+res://scripts/manager.gd
+res://scripts/game_manager.gd
