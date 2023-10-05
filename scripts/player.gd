@@ -39,7 +39,7 @@ func _process(delta):
 	direction =  Input.get_axis("ui_left","ui_right")
 	
 	#TODO: in the line below uncomment to disable double jump
-	if Input.is_action_just_pressed("ui_select"): # and is_on_floor():
+	if Input.is_action_just_pressed("ui_select") and is_on_floor():
 		jump(jump_force)
 		AudioPlayer.play_sfx("jump")
 		
